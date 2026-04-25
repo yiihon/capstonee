@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinCheck - AI 驱动的中国 Fintech 合规速查工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <h1>FinCheck</h1>
+                </a>
+                <p>AI 驱动・中国 Fintech 初创 / 学生轻量化合规速查工具</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#compliance">合规赛道速查</a></li>
+                <li><a href="#ai-qa">AI 自然语言问答</a></li>
+                <li><a href="#self-check">一键自查报告</a></li>
+                <li><a href="#updates">政策更新提醒</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 合规赛道速查 -->
+        <section id="compliance" class="section">
+            <div class="container">
+                <h2>合规赛道速查</h2>
+                <p>4 大核心赛道政策 / 牌照 / 要求一键查看</p>
+                
+                <div class="tracks">
+                    <a href="mobile-payment.html" class="track-card" data-track="mobile-payment">
+                        <h3>移动支付</h3>
+                        <p>查看相关政策与牌照要求</p>
+                    </a>
+                    <a href="consumer-finance.html" class="track-card" data-track="consumer-finance">
+                        <h3>消费金融</h3>
+                        <p>查看相关政策与牌照要求</p>
+                    </a>
+                    <a href="anti-money-laundering.html" class="track-card" data-track="anti-money-laundering">
+                        <h3>反洗钱</h3>
+                        <p>查看相关政策与牌照要求</p>
+                    </a>
+                    <a href="data-compliance.html" class="track-card" data-track="data-compliance">
+                        <h3>数据合规</h3>
+                        <p>查看相关政策与牌照要求</p>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- AI 自然语言问答 -->
+        <section id="ai-qa" class="section">
+            <div class="container">
+                <h2>AI 自然语言问答</h2>
+                <p>输入问题直接出合规答案</p>
+                
+                <div class="qa-container">
+                    <div class="qa-input">
+                        <textarea id="question-input" placeholder="请输入您的合规问题，例如：移动支付需要哪些牌照？"></textarea>
+                        <button id="ask-button">提问</button>
+                    </div>
+                    <div class="qa-output">
+                        <h3>AI 回答</h3>
+                        <div id="answer-output">
+                            <p>请输入问题后点击提问按钮</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 一键自查报告 -->
+        <section id="self-check" class="section">
+            <div class="container">
+                <h2>一键自查报告</h2>
+                <p>AI 生成简易风险清单</p>
+                
+                <div class="check-container">
+                    <div class="check-form">
+                        <h3>填写您的业务信息</h3>
+                        <div class="form-group">
+                            <label>业务类型</label>
+                            <select id="business-type">
+                                <option value="">请选择</option>
+                                <option value="mobile-payment">移动支付</option>
+                                <option value="consumer-finance">消费金融</option>
+                                <option value="anti-money-laundering">反洗钱</option>
+                                <option value="data-compliance">数据合规</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>业务规模</label>
+                            <select id="business-scale">
+                                <option value="">请选择</option>
+                                <option value="startup">初创企业</option>
+                                <option value="small">小型企业</option>
+                                <option value="medium">中型企业</option>
+                                <option value="large">大型企业</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>业务描述</label>
+                            <textarea id="business-description" placeholder="请简要描述您的业务模式和运营情况"></textarea>
+                        </div>
+                        <button id="generate-report">生成自查报告</button>
+                    </div>
+                    <div class="report-output">
+                        <h3>自查报告</h3>
+                        <div id="report-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 政策更新提醒 -->
+        <section id="updates" class="section">
+            <div class="container">
+                <h2>政策更新提醒</h2>
+                <p>AI 监控官网并自动摘要推送</p>
+                
+                <div class="updates-container">
+                    <div class="updates-list" id="updates-list">
+                        <!-- 政策更新列表将通过 JavaScript 动态生成 -->
+                    </div>
+                    <div class="subscribe-form">
+                        <h3>订阅更新提醒</h3>
+                        <div class="form-group">
+                            <label>邮箱地址</label>
+                            <input type="email" id="email-input" placeholder="请输入您的邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label>关注赛道</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" value="mobile-payment"> 移动支付</label>
+                                <label><input type="checkbox" value="consumer-finance"> 消费金融</label>
+                                <label><input type="checkbox" value="anti-money-laundering"> 反洗钱</label>
+                                <label><input type="checkbox" value="data-compliance"> 数据合规</label>
+                            </div>
+                        </div>
+                        <button id="subscribe-button">订阅</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>FinCheck</h3>
+                <p>AI 驱动的中国 Fintech 初创 / 学生轻量化合规速查工具</p>
+                <div class="footer-links">
+                    <a href="#compliance">合规赛道速查</a>
+                    <a href="#ai-qa">AI 自然语言问答</a>
+                    <a href="#self-check">一键自查报告</a>
+                    <a href="#updates">政策更新提醒</a>
+                </div>
+                <p>专注于移动支付、消费金融、反洗钱、数据合规四大核心赛道</p>
+                <div class="copyright">
+                    <p>&copy; 2026 FinCheck. 保留所有权利。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
